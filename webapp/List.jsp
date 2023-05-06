@@ -1,18 +1,32 @@
 
 <%@ include file="Nav.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="model.board" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+
 <html>
 <head>
     <title>Title</title>
 
 </head>
 <body>
-    <ul class="list-group">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
+<% 
+	List<board> boardList=(ArrayList<board>)request.getAttribute("List");
+%>
+<%if(boardList!=null){ %>
+<% for(board data : boardList) { %>
+<div>
+	<li><p>NUM: <%= data.getIdx() %></p>
+	<p><a href="/detail_s?idx=<%= data.getIdx() %>"><h4>title: <%= data.getTitle() %></h4></a></p>
+	<p>DATE: <%= data.getPostdate() %></p>
+</div>
+	 </li>
+<% } %>
+<% } %>
+
+	
 </ul>
+
 </body>
 </html>

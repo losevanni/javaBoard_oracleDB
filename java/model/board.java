@@ -2,29 +2,27 @@ package model;
 
 
 public class board {
-    private String idx; 
-    private String name;
+    private int idx;
+    private String id;
     private String title;
     private String content;
-    private java.sql.Date postdate;
     private String ofile;
     private String sfile;
-    private int downcount;
     private String pass;
-    private int visitcount;
+    private java.sql.Date postdate;
 
     // 게터/세터
-    public String getIdx() { 
+    public int getIdx() { 
         return idx;
     }
-    public void setIdx(String idx) {
+    public void setIdx(int idx) {
         this.idx = idx;
     }
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
     }
     public String getTitle() {
         return title;
@@ -38,12 +36,6 @@ public class board {
     public void setContent(String content) {
         this.content = content;
     }
-    public java.sql.Date getPostdate() {
-        return postdate;
-    }
-    public void setPostdate(java.sql.Date postdate) {
-        this.postdate = postdate;
-    }
     public String getOfile() {
         return ofile;
     }
@@ -56,11 +48,16 @@ public class board {
     public void setSfile(String sfile) {
         this.sfile = sfile;
     }
-
     public String getPass() {
         return pass;
     }
     public void setPass(String pass) {
         this.pass = pass;
+    }
+    public java.sql.Date getPostdate() {
+        return postdate;
+    }
+    public void setPostdate(java.sql.Date postdate) {
+        this.postdate = postdate;
     }
 }

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>web1</display-name>
+    <session-config>
+    	<session-timeout>30</session-timeout>
+    </session-config>
+    <context-param>
+    <param-name>maxFileSize</param-name>
+    <param-value>4096000</param-value>
+    </context-param>
+    <context-param>
+      <param-name>FilePath</param-name>
+      <param-value>/root/Upload</param-value>
+    </context-param>
+    <context-param>
+    	<param-name>NEW_FilePath</param-name>
+      	<param-value>/root/website1/web1/src/main/webapp/Upfile</param-value>
+    </context-param>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -9,25 +24,5 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-      <context-param>
-        <param-name>db.driver</param-name>
-        <param-value>oracle.jdbc.driver.OracleDriver</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>db.url</param-name>
-        <param-value>jdbc:oracle:thin:@localhost:1521:DB19c</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>db.username</param-name>
-        <param-value>ora19c</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>db.password</param-name>
-        <param-value>kms1030</param-value>
-    </context-param>
   
 </web-app>

@@ -5,6 +5,7 @@ public class member {
 	private String pw;
 	private String name;
 	private java.sql.Date memberdate;
+	
 	public String getId() {
 		return id;
 	}
